@@ -207,7 +207,7 @@ local function log(data, name)
     for oldPath = 1, paths.n do 
         local checkPath = "/logs/" .. paths[oldPath]
 
-        if not days[paths[oldPath]] and filesystem.isDirectory(checkPath) and oldPath[path]:match("%d+.%d+.%d+") then
+        if not days[paths[oldPath]] and filesystem.isDirectory(checkPath) and checkPath:match("%d+.%d+.%d+.log") then
             filesystem.remove(checkPath)
         end
     end
