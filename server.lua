@@ -7,7 +7,7 @@ local modem = component.modem
 local port = 1414
 
 local terminals = {
-	"39f19ac0-4341-4e2f-a2ea-c62a648aaeb4"
+	"fa912cb3-2b52-444f-9bce-3c70b2e1c9d5"
 }
 
 for terminal = 1, #terminals do 
@@ -278,8 +278,4 @@ function stop()
 	end
 end
 
-function restart()
-	if stop() then
-		start()
-	end
-end
+start()
